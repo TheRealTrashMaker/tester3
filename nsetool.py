@@ -75,8 +75,9 @@ def nse_charter(regulation):
         }
     return new_json_data
 
-@app.route('/kline_1day/<regulation>', methods=['GET'])
-def kline_chart(regulation):
+@app.route('/kline', methods=['GET'])
+def kline_chart():
+    regulation = request.args.get('stock_code', 'BRACEPORT')
     chart_data = nse_charter(regulation)
     return_data = {
         "categories":[
