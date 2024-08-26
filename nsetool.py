@@ -103,4 +103,4 @@ def kline_chart(regulation):
     return jsonify(return_data)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5299, debug=True)
+    app.run(host='0.0.0.0', port=5355, debug=True)
